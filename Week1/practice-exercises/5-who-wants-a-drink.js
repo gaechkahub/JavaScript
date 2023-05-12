@@ -9,3 +9,13 @@
 
 // There are 3 different types of drinks:
 const drinkTypes = ['cola', 'lemonade', 'water'];
+let drinkTray = [];
+for (let i = 0; i < 5; i++) {
+    let item = drinkTypes[Math.floor(Math.random()*drinkTypes.length)];
+    drinkTray.push(item);
+    if (drinkTray.filter(x => x==item).length > 2) {
+        drinkTray.pop();
+        i--;
+    }
+}
+console.log(`Hey guys, I brought a ${drinkTray.join(", ")}!`);
