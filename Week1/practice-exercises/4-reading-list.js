@@ -9,3 +9,20 @@
  *  If you haven't read it log a string like You still need to read "The Lord of the Rings"
  */
 
+const books = [
+    {title: "The Lord of the Rings", author: "J.R.R. Tolkien", isRead: true},
+    {title: "The Hobbit", author: "J.R.R. Tolkien", isRead: true},
+    {title: "Airport", author: "Arthur Hailey", isRead: false}
+];
+
+books.forEach(book => {
+    let bookDetails = `"${book.title}" by ${book.author}`;
+
+    if (book.isRead) {
+        console.log(`${bookDetails}. You already read "${book.title}".`);
+    } 
+    else {
+        console.log(`${bookDetails}. You still need to read "${book.title}".`);
+    }
+}
+);
